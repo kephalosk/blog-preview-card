@@ -17,15 +17,15 @@ This is a solution to the [Blog preview card challenge on Frontend Mentor](https
 
 Desktop
 
-![Desktop](screenshots/desktop.png)
+![Desktop](ressources/screenshots/desktop.png)
 
 Mobile
 
-![Mobile](screenshots/mobile.png)
+![Mobile](ressources/screenshots/mobile.png)
 
 Active State
 
-![Active](screenshots/active.png)
+![Active](ressources/screenshots/active.png)
 
 ### Links
 
