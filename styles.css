@@ -12,6 +12,7 @@
 body {
   margin: 0;
   background-color: #F4D04E;
+  padding: 1.25rem;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -42,7 +43,9 @@ body {
   box-shadow: 5px 5px 0 0 #111111;
   border: 1px solid #111111;
   border-radius: 1.25rem;
+  background-color: #FFFFFF;
   padding: 1.5rem;
+  max-width: 24rem;
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
@@ -78,7 +81,8 @@ body {
 .cardContentCategory {
   border-radius: 0.25rem;
   background-color: #F4D04E;
-  padding: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  max-width: fit-content;
   display: block;
   color: #111111;
   font-family: Figtree, sans-serif;
@@ -102,14 +106,17 @@ body {
   color: #6B6B6B;
   font-family: Figtree, sans-serif;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1rem;
   line-height: 150%;
   letter-spacing: 0;
 }
 
 .cardContentTitle {
   margin: 0;
+  border-radius: 0.25rem;
+  border: 1px solid #FFFFFF;
   color: #111111;
+  cursor: pointer;
   font-family: Figtree, sans-serif;
   font-weight: 800;
   font-size: 1.5rem;
@@ -117,9 +124,20 @@ body {
   letter-spacing: 0;
 }
 
+.cardContentTitle:hover {
+  color: #F4D04E;
+}
+
+.cardContentTitle:focus-visible {
+  border: 1px solid #111111;
+  color: #F4D04E;
+  outline: none;
+}
+
 .cardImage {
+  height: 200px;
   width: 100%;
-  overflow: hidden;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=styles.css.map */

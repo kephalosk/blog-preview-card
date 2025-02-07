@@ -7,6 +7,7 @@ $color-yellow: #F4D04E;
 $space-4px: 0.25rem;
 $space-8px: 0.5rem;
 $space-12px: 0.75rem;
+$space-20px: 1.25rem;
 $space-24px: 1.5rem;
 
 $radius4px: 0.25rem;
@@ -35,7 +36,7 @@ $max-content-width: 24rem;
 @mixin text-preset-2 {
   font-family: Figtree, sans-serif;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1rem;
   line-height: 150%;
   letter-spacing: 0;
 }
@@ -63,6 +64,7 @@ $max-content-width: 24rem;
 body {
   margin: 0;
   background-color: $color-yellow;
+  padding: $space-20px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -92,7 +94,9 @@ body {
   box-shadow: 5px 5px 0 0 $color-gray-950;
   border: 1px solid $color-gray-950;
   border-radius: $radius20px;
+  background-color: $color-white;
   padding: $space-24px;
+  max-width: $max-content-width;
   display: flex;
   flex-direction: column;
   row-gap: $space-24px;
@@ -125,7 +129,8 @@ body {
 .cardContentCategory {
   border-radius: $radius4px;
   background-color: $color-yellow;
-  padding: $space-4px;
+  padding: $space-4px $space-8px;
+  max-width: fit-content;
   display: block;
   color: $color-gray-950;
 
@@ -147,12 +152,24 @@ body {
 
 .cardContentTitle {
   margin: 0;
+  border-radius: $space-4px;
+  border: 1px solid $color-white;
   color: $color-gray-950;
+  cursor: pointer;
 
   @include text-preset-1;
 }
+.cardContentTitle:hover {
+  color: $color-yellow;
+}
+.cardContentTitle:focus-visible {
+  border: 1px solid $color-gray-950;
+  color: $color-yellow;
+  outline: none;
+}
 
 .cardImage {
+  height: 200px;
   width: 100%;
-  overflow: hidden;
+  object-fit: cover;
 }
