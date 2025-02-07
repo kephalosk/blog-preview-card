@@ -91,7 +91,7 @@ body {
 }
 
 .card {
-  box-shadow: 5px 5px 0 0 $color-gray-950;
+  box-shadow: $space-8px $space-8px 0 $color-gray-950;
   border: 1px solid $color-gray-950;
   border-radius: $radius20px;
   background-color: $color-white;
@@ -105,6 +105,7 @@ body {
 .cardAuthorBar {
   display: flex;
   flex-direction: row;
+  align-items: center;
   column-gap: $space-12px;
 }
 
@@ -129,7 +130,7 @@ body {
 .cardContentCategory {
   border-radius: $radius4px;
   background-color: $color-yellow;
-  padding: $space-4px $space-8px;
+  padding: $space-4px $space-12px;
   max-width: fit-content;
   display: block;
   color: $color-gray-950;
