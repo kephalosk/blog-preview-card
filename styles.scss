@@ -1,20 +1,8 @@
-:root {
-  @font-face {
-    font-family: 'Figtree';
-    src: url('assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
-    font-weight: 500 800;
-    font-style: normal;
-  }
-}
-
-* {
-  box-sizing: border-box;
-}
-
-$color-yellow: #F4D04E;
+$color-attribution: hsl(228, 45%, 44%);
 $color-gray-500: #6B6B6B;
 $color-gray-950: #111111;
 $color-white: #FFFFFF;
+$color-yellow: #F4D04E;
 
 $space-4px: 0.25rem;
 $space-8px: 0.5rem;
@@ -26,6 +14,15 @@ $radius10px: 0.625rem;
 $radius20px: 1.25rem;
 
 $max-content-width: 24rem;
+
+:root {
+  @font-face {
+    font-family: 'Figtree';
+    src: url('assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
+    font-weight: 500 800;
+    font-style: normal;
+  }
+}
 
 @mixin text-preset-1 {
   font-family: Figtree, sans-serif;
@@ -57,4 +54,105 @@ $max-content-width: 24rem;
   font-size: 0.875rem;
   line-height: 150%;
   letter-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: $color-yellow;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+}
+.attribution a {
+  color: $color-attribution;
+}
+
+.card {
+  box-shadow: 5px 5px 0 0 $color-gray-950;
+  border: 1px solid $color-gray-950;
+  border-radius: $radius20px;
+  padding: $space-24px;
+  display: flex;
+  flex-direction: column;
+  row-gap: $space-24px;
+}
+
+.cardAuthorBar {
+  display: flex;
+  flex-direction: row;
+  column-gap: $space-12px;
+}
+
+.cardAuthorBarImage {
+  border-radius: 100%;
+  height: 32px;
+  width: 32px;
+}
+
+.cardAuthorBarLabel {
+  color: $color-gray-950;
+
+  @include text-preset-3-bold;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  row-gap: $space-12px;
+}
+
+.cardContentCategory {
+  border-radius: $radius4px;
+  background-color: $color-yellow;
+  padding: $space-4px;
+  display: block;
+  color: $color-gray-950;
+
+  @include text-preset-3-bold;
+}
+
+.cardContentDate {
+  color: $color-gray-950;
+
+  @include text-preset-3;
+}
+
+.cardContentText {
+  margin: 0;
+  color: $color-gray-500;
+
+  @include text-preset-2;
+}
+
+.cardContentTitle {
+  margin: 0;
+  color: $color-gray-950;
+
+  @include text-preset-1;
+}
+
+.cardImage {
+  width: 100%;
+  overflow: hidden;
 }
